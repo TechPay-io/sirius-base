@@ -3,11 +3,11 @@ package vecfc
 import (
 	"testing"
 
-	"github.com/Techpay-io/sirius-base/hash"
-	"github.com/Techpay-io/sirius-base/inter/dag"
-	"github.com/Techpay-io/sirius-base/inter/dag/tdag"
-	"github.com/Techpay-io/sirius-base/inter/pos"
-	"github.com/Techpay-io/sirius-base/kvdb/memorydb"
+	"github.com/TechPay-io/sirius-base/hash"
+	"github.com/TechPay-io/sirius-base/inter/dag"
+	"github.com/TechPay-io/sirius-base/inter/dag/tdag"
+	"github.com/TechPay-io/sirius-base/inter/pos"
+	"github.com/TechPay-io/sirius-base/kvdb/memorydb"
 )
 
 var (

@@ -4,7 +4,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Techpay-io/sirius-base/inter/dag"
+	"github.com/TechPay-io/sirius-base/inter/dag"
 )
 
 type DataSemaphore struct {

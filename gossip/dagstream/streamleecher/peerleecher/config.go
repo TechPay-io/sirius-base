@@ -3,7 +3,7 @@ package peerleecher
 import (
 	"time"
 
-	"github.com/Techpay-io/sirius-base/inter/dag"
+	"github.com/TechPay-io/sirius-base/inter/dag"
 )
 
 type EpochDownloaderConfig struct {

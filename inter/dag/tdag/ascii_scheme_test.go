@@ -5,8 +5,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/Techpay-io/sirius-base/inter/dag"
-	"github.com/Techpay-io/sirius-base/utils"
+	"github.com/TechPay-io/sirius-base/inter/dag"
+	"github.com/TechPay-io/sirius-base/utils"
 )
 
 func TestASCIIschemeToDAG(t *testing.T) {

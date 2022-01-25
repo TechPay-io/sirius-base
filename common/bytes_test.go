@@ -5,8 +5,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/Techpay-io/sirius-base/common/bigendian"
-	"github.com/Techpay-io/sirius-base/common/littleendian"
+	"github.com/TechPay-io/sirius-base/common/bigendian"
+	"github.com/TechPay-io/sirius-base/common/littleendian"
 )
 
 func Test_IntToBytes(t *testing.T) {

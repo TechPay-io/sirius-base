@@ -1,7 +1,7 @@
 package ancestor
 
 import (
-	"github.com/Techpay-io/sirius-base/hash"
+	"github.com/TechPay-io/sirius-base/hash"
 )
 
 type MetricStrategy struct {

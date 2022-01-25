@@ -1,10 +1,10 @@
 package eventcheck
 
 import (
-	"github.com/Techpay-io/sirius-base/eventcheck/basiccheck"
-	"github.com/Techpay-io/sirius-base/eventcheck/epochcheck"
-	"github.com/Techpay-io/sirius-base/eventcheck/parentscheck"
-	"github.com/Techpay-io/sirius-base/inter/dag"
+	"github.com/TechPay-io/sirius-base/eventcheck/basiccheck"
+	"github.com/TechPay-io/sirius-base/eventcheck/epochcheck"
+	"github.com/TechPay-io/sirius-base/eventcheck/parentscheck"
+	"github.com/TechPay-io/sirius-base/inter/dag"
 )
 
 // Checkers is collection of all the checkers

@@ -8,8 +8,8 @@ import (
 
 	"github.com/status-im/keycard-go/hexutils"
 
-	"github.com/Techpay-io/sirius-base/kvdb"
-	"github.com/Techpay-io/sirius-base/kvdb/synced"
+	"github.com/TechPay-io/sirius-base/kvdb"
+	"github.com/TechPay-io/sirius-base/kvdb/synced"
 )
 
 var _ kvdb.FlushableDBProducer = (*SyncedPool)(nil)

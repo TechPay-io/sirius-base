@@ -1,6 +1,6 @@
 package streamseeder
 
-import "github.com/Techpay-io/sirius-base/utils/cachescale"
+import "github.com/TechPay-io/sirius-base/utils/cachescale"
 
 type Config struct {
 	SenderThreads           int

@@ -3,7 +3,7 @@ package hash
 import (
 	"sync"
 
-	"github.com/Techpay-io/sirius-base/inter/idx"
+	"github.com/TechPay-io/sirius-base/inter/idx"
 )
 
 var (

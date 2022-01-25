@@ -14,11 +14,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/syndtr/goleveldb/leveldb/opt"
 
-	"github.com/Techpay-io/sirius-base/common/bigendian"
-	"github.com/Techpay-io/sirius-base/kvdb"
-	"github.com/Techpay-io/sirius-base/kvdb/leveldb"
-	"github.com/Techpay-io/sirius-base/kvdb/memorydb"
-	"github.com/Techpay-io/sirius-base/kvdb/table"
+	"github.com/TechPay-io/sirius-base/common/bigendian"
+	"github.com/TechPay-io/sirius-base/kvdb"
+	"github.com/TechPay-io/sirius-base/kvdb/leveldb"
+	"github.com/TechPay-io/sirius-base/kvdb/memorydb"
+	"github.com/TechPay-io/sirius-base/kvdb/table"
 )
 
 func TestFlushable(t *testing.T) {

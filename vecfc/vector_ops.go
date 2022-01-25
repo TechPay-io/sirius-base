@@ -1,9 +1,9 @@
 package vecfc
 
 import (
-	"github.com/Techpay-io/sirius-base/inter/dag"
-	"github.com/Techpay-io/sirius-base/inter/idx"
-	"github.com/Techpay-io/sirius-base/vecengine"
+	"github.com/TechPay-io/sirius-base/inter/dag"
+	"github.com/TechPay-io/sirius-base/inter/idx"
+	"github.com/TechPay-io/sirius-base/vecengine"
 )
 
 func (b *LowestAfterSeq) InitWithEvent(i idx.Validator, e dag.Event) {

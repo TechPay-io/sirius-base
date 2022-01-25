@@ -5,8 +5,8 @@ import (
 
 	"github.com/syndtr/goleveldb/leveldb/opt"
 
-	"github.com/Techpay-io/sirius-base/inter/dag"
-	"github.com/Techpay-io/sirius-base/utils/cachescale"
+	"github.com/TechPay-io/sirius-base/inter/dag"
+	"github.com/TechPay-io/sirius-base/utils/cachescale"
 )
 
 type Config struct {

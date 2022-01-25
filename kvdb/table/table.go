@@ -1,7 +1,7 @@
 package table
 
 import (
-	"github.com/Techpay-io/sirius-base/kvdb"
+	"github.com/TechPay-io/sirius-base/kvdb"
 )
 
 // Table wraper the underling DB, so all the table's data is stored with a prefix in underling DB

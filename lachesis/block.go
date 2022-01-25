@@ -1,7 +1,7 @@
 package sirius
 
 import (
-	"github.com/Techpay-io/sirius-base/hash"
+	"github.com/TechPay-io/sirius-base/hash"
 )
 
 // Block is a part of an ordered chain of batches of events.

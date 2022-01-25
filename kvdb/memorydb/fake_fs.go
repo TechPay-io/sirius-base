@@ -4,8 +4,8 @@ import (
 	"math/rand"
 	"sync"
 
-	"github.com/Techpay-io/sirius-base/hash"
-	"github.com/Techpay-io/sirius-base/kvdb"
+	"github.com/TechPay-io/sirius-base/hash"
+	"github.com/TechPay-io/sirius-base/kvdb"
 )
 
 type fakeFS struct {

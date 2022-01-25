@@ -5,9 +5,9 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/Techpay-io/sirius-base/hash"
-	"github.com/Techpay-io/sirius-base/inter/dag"
-	"github.com/Techpay-io/sirius-base/inter/dag/tdag"
+	"github.com/TechPay-io/sirius-base/hash"
+	"github.com/TechPay-io/sirius-base/inter/dag"
+	"github.com/TechPay-io/sirius-base/inter/dag/tdag"
 )
 
 // EventStore is a abft event storage for test purpose.

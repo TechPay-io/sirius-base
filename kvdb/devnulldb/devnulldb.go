@@ -1,7 +1,7 @@
 package devnulldb
 
 import (
-	"github.com/Techpay-io/sirius-base/kvdb"
+	"github.com/TechPay-io/sirius-base/kvdb"
 )
 
 // Database is an always empty database.

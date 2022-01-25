@@ -3,8 +3,8 @@ package abft
 import (
 	"errors"
 
-	"github.com/Techpay-io/sirius-base/hash"
-	"github.com/Techpay-io/sirius-base/inter/dag"
+	"github.com/TechPay-io/sirius-base/hash"
+	"github.com/TechPay-io/sirius-base/inter/dag"
 )
 
 type eventFilterFn func(event dag.Event) bool

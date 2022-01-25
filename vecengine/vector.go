@@ -1,8 +1,8 @@
 package vecengine
 
 import (
-	"github.com/Techpay-io/sirius-base/inter/dag"
-	"github.com/Techpay-io/sirius-base/inter/idx"
+	"github.com/TechPay-io/sirius-base/inter/dag"
+	"github.com/TechPay-io/sirius-base/inter/idx"
 )
 
 type LowestAfterI interface {

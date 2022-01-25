@@ -4,7 +4,7 @@ import (
 	"crypto/sha256"
 	"fmt"
 
-	"github.com/Techpay-io/sirius-base/hash"
+	"github.com/TechPay-io/sirius-base/hash"
 )
 
 // DebugStateHash may be used in tests to match election state

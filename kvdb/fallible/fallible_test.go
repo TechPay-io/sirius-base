@@ -5,8 +5,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/Techpay-io/sirius-base/kvdb"
-	"github.com/Techpay-io/sirius-base/kvdb/memorydb"
+	"github.com/TechPay-io/sirius-base/kvdb"
+	"github.com/TechPay-io/sirius-base/kvdb/memorydb"
 )
 
 func TestFallible(t *testing.T) {

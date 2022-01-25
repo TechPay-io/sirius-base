@@ -4,7 +4,7 @@ import (
 	"errors"
 	"math"
 
-	"github.com/Techpay-io/sirius-base/inter/dag"
+	"github.com/TechPay-io/sirius-base/inter/dag"
 )
 
 var (

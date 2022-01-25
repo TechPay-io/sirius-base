@@ -6,8 +6,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/Techpay-io/sirius-base/kvdb/memorydb"
-	"github.com/Techpay-io/sirius-base/kvdb/table"
+	"github.com/TechPay-io/sirius-base/kvdb/memorydb"
+	"github.com/TechPay-io/sirius-base/kvdb/table"
 )
 
 func TestWrapper(t *testing.T) {

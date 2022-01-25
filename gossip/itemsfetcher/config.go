@@ -3,7 +3,7 @@ package itemsfetcher
 import (
 	"time"
 
-	"github.com/Techpay-io/sirius-base/utils/cachescale"
+	"github.com/TechPay-io/sirius-base/utils/cachescale"
 )
 
 type Config struct {

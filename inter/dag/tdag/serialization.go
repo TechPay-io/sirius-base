@@ -3,8 +3,8 @@ package tdag
 import (
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"github.com/Techpay-io/sirius-base/hash"
-	"github.com/Techpay-io/sirius-base/inter/idx"
+	"github.com/TechPay-io/sirius-base/hash"
+	"github.com/TechPay-io/sirius-base/inter/idx"
 )
 
 type TestEventMarshaling struct {

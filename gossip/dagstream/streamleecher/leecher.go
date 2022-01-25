@@ -5,11 +5,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Techpay-io/sirius-base/gossip/dagstream"
-	"github.com/Techpay-io/sirius-base/gossip/dagstream/streamleecher/peerleecher"
-	"github.com/Techpay-io/sirius-base/hash"
-	"github.com/Techpay-io/sirius-base/inter/dag"
-	"github.com/Techpay-io/sirius-base/inter/idx"
+	"github.com/TechPay-io/sirius-base/gossip/dagstream"
+	"github.com/TechPay-io/sirius-base/gossip/dagstream/streamleecher/peerleecher"
+	"github.com/TechPay-io/sirius-base/hash"
+	"github.com/TechPay-io/sirius-base/inter/dag"
+	"github.com/TechPay-io/sirius-base/inter/idx"
 )
 
 // Leecher is responsible for requesting events based on lexicographic event streams

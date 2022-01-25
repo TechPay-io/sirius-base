@@ -3,9 +3,9 @@ package abft
 import (
 	"github.com/pkg/errors"
 
-	"github.com/Techpay-io/sirius-base/abft/election"
-	"github.com/Techpay-io/sirius-base/inter/dag"
-	"github.com/Techpay-io/sirius-base/inter/idx"
+	"github.com/TechPay-io/sirius-base/abft/election"
+	"github.com/TechPay-io/sirius-base/inter/dag"
+	"github.com/TechPay-io/sirius-base/inter/idx"
 )
 
 var (

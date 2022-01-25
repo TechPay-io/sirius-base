@@ -3,7 +3,7 @@ package nokeyiserr
 import (
 	"errors"
 
-	"github.com/Techpay-io/sirius-base/kvdb"
+	"github.com/TechPay-io/sirius-base/kvdb"
 )
 
 var (

@@ -3,9 +3,9 @@ package epochcheck
 import (
 	"errors"
 
-	"github.com/Techpay-io/sirius-base/inter/dag"
-	"github.com/Techpay-io/sirius-base/inter/idx"
-	"github.com/Techpay-io/sirius-base/inter/pos"
+	"github.com/TechPay-io/sirius-base/inter/dag"
+	"github.com/TechPay-io/sirius-base/inter/idx"
+	"github.com/TechPay-io/sirius-base/inter/pos"
 )
 
 var (

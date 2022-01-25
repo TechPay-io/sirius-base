@@ -1,7 +1,7 @@
 package skiperrors
 
 import (
-	"github.com/Techpay-io/sirius-base/kvdb"
+	"github.com/TechPay-io/sirius-base/kvdb"
 )
 
 // wrapper is a kvdb.Store wrapper around any kvdb.Store.
