@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"reflect"
 
-	"github.com/Techpay-foundation/sirius-base/kvdb"
+	"github.com/Techpay-io/sirius-base/kvdb"
 )
 
 // MigrateTables sets target fields to database tables.

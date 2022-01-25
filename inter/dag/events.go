@@ -3,8 +3,8 @@ package dag
 import (
 	"strings"
 
-	"github.com/Techpay-foundation/sirius-base/hash"
-	"github.com/Techpay-foundation/sirius-base/inter/idx"
+	"github.com/Techpay-io/sirius-base/hash"
+	"github.com/Techpay-io/sirius-base/inter/idx"
 )
 
 // Events is a ordered slice of events.

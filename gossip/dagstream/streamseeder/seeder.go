@@ -9,10 +9,10 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"github.com/Techpay-foundation/sirius-base/gossip/dagstream"
-	"github.com/Techpay-foundation/sirius-base/hash"
-	"github.com/Techpay-foundation/sirius-base/inter/idx"
-	"github.com/Techpay-foundation/sirius-base/utils/workers"
+	"github.com/Techpay-io/sirius-base/gossip/dagstream"
+	"github.com/Techpay-io/sirius-base/hash"
+	"github.com/Techpay-io/sirius-base/inter/idx"
+	"github.com/Techpay-io/sirius-base/utils/workers"
 )
 
 var (

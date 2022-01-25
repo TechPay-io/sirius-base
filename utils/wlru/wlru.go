@@ -3,7 +3,7 @@ package wlru
 import (
 	"sync"
 
-	"github.com/Techpay-foundation/sirius-base/utils/simplewlru"
+	"github.com/Techpay-io/sirius-base/utils/simplewlru"
 )
 
 // Cache is a thread-safe fixed size LRU cache.

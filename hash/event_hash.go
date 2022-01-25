@@ -11,8 +11,8 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"github.com/Techpay-foundation/sirius-base/common/bigendian"
-	"github.com/Techpay-foundation/sirius-base/inter/idx"
+	"github.com/Techpay-io/sirius-base/common/bigendian"
+	"github.com/Techpay-io/sirius-base/inter/idx"
 )
 
 type (

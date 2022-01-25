@@ -5,7 +5,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/Techpay-foundation/sirius-base/kvdb"
+	"github.com/Techpay-io/sirius-base/kvdb"
 )
 
 type Producer struct {

@@ -1,15 +1,15 @@
 package vecfc
 
 import (
-	"github.com/Techpay-foundation/sirius-base/hash"
-	"github.com/Techpay-foundation/sirius-base/inter/dag"
-	"github.com/Techpay-foundation/sirius-base/inter/idx"
-	"github.com/Techpay-foundation/sirius-base/inter/pos"
-	"github.com/Techpay-foundation/sirius-base/kvdb"
-	"github.com/Techpay-foundation/sirius-base/kvdb/table"
-	"github.com/Techpay-foundation/sirius-base/utils/cachescale"
-	"github.com/Techpay-foundation/sirius-base/utils/simplewlru"
-	"github.com/Techpay-foundation/sirius-base/vecengine"
+	"github.com/Techpay-io/sirius-base/hash"
+	"github.com/Techpay-io/sirius-base/inter/dag"
+	"github.com/Techpay-io/sirius-base/inter/idx"
+	"github.com/Techpay-io/sirius-base/inter/pos"
+	"github.com/Techpay-io/sirius-base/kvdb"
+	"github.com/Techpay-io/sirius-base/kvdb/table"
+	"github.com/Techpay-io/sirius-base/utils/cachescale"
+	"github.com/Techpay-io/sirius-base/utils/simplewlru"
+	"github.com/Techpay-io/sirius-base/vecengine"
 )
 
 // IndexCacheConfig - config for cache sizes of Engine

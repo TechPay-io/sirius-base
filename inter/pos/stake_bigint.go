@@ -3,7 +3,7 @@ package pos
 import (
 	"math/big"
 
-	"github.com/Techpay-foundation/sirius-base/inter/idx"
+	"github.com/Techpay-io/sirius-base/inter/idx"
 )
 
 // ValidatorsBuilderBig is a helper to create Validators object out of bigint numbers

@@ -5,14 +5,14 @@ import (
 	"runtime"
 	"sync"
 
-	"github.com/Techpay-foundation/sirius-base/eventcheck"
-	"github.com/Techpay-foundation/sirius-base/eventcheck/queuedcheck"
-	"github.com/Techpay-foundation/sirius-base/gossip/dagordering"
-	"github.com/Techpay-foundation/sirius-base/hash"
-	"github.com/Techpay-foundation/sirius-base/inter/dag"
-	"github.com/Techpay-foundation/sirius-base/inter/idx"
-	"github.com/Techpay-foundation/sirius-base/utils/datasemaphore"
-	"github.com/Techpay-foundation/sirius-base/utils/workers"
+	"github.com/Techpay-io/sirius-base/eventcheck"
+	"github.com/Techpay-io/sirius-base/eventcheck/queuedcheck"
+	"github.com/Techpay-io/sirius-base/gossip/dagordering"
+	"github.com/Techpay-io/sirius-base/hash"
+	"github.com/Techpay-io/sirius-base/inter/dag"
+	"github.com/Techpay-io/sirius-base/inter/idx"
+	"github.com/Techpay-io/sirius-base/utils/datasemaphore"
+	"github.com/Techpay-io/sirius-base/utils/workers"
 )
 
 var (

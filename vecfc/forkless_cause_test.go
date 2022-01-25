@@ -9,12 +9,12 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/Techpay-foundation/sirius-base/hash"
-	"github.com/Techpay-foundation/sirius-base/inter/dag"
-	"github.com/Techpay-foundation/sirius-base/inter/dag/tdag"
-	"github.com/Techpay-foundation/sirius-base/inter/idx"
-	"github.com/Techpay-foundation/sirius-base/inter/pos"
-	"github.com/Techpay-foundation/sirius-base/kvdb/memorydb"
+	"github.com/Techpay-io/sirius-base/hash"
+	"github.com/Techpay-io/sirius-base/inter/dag"
+	"github.com/Techpay-io/sirius-base/inter/dag/tdag"
+	"github.com/Techpay-io/sirius-base/inter/idx"
+	"github.com/Techpay-io/sirius-base/inter/pos"
+	"github.com/Techpay-io/sirius-base/kvdb/memorydb"
 )
 
 func tCrit(err error) { panic(err) }

@@ -4,7 +4,7 @@ import (
 	"errors"
 	"sync/atomic"
 
-	"github.com/Techpay-foundation/sirius-base/kvdb"
+	"github.com/Techpay-io/sirius-base/kvdb"
 )
 
 var (

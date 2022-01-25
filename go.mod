@@ -1,4 +1,4 @@
-module github.com/Techpay-foundation/sirius-base
+module github.com/Techpay-io/sirius-base
 
 go 1.14
 

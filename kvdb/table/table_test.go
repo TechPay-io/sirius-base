@@ -10,10 +10,10 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/Techpay-foundation/sirius-base/kvdb"
-	"github.com/Techpay-foundation/sirius-base/kvdb/flushable"
-	"github.com/Techpay-foundation/sirius-base/kvdb/leveldb"
-	"github.com/Techpay-foundation/sirius-base/kvdb/memorydb"
+	"github.com/Techpay-io/sirius-base/kvdb"
+	"github.com/Techpay-io/sirius-base/kvdb/flushable"
+	"github.com/Techpay-io/sirius-base/kvdb/leveldb"
+	"github.com/Techpay-io/sirius-base/kvdb/memorydb"
 )
 
 func tempLevelDB(name string) *leveldb.Database {

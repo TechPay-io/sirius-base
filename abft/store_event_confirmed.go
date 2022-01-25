@@ -1,8 +1,8 @@
 package abft
 
 import (
-	"github.com/Techpay-foundation/sirius-base/hash"
-	"github.com/Techpay-foundation/sirius-base/inter/idx"
+	"github.com/Techpay-io/sirius-base/hash"
+	"github.com/Techpay-io/sirius-base/inter/idx"
 )
 
 // SetEventConfirmedOn stores confirmed event hash.

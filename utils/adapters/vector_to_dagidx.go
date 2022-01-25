@@ -1,10 +1,10 @@
 package adapters
 
 import (
-	"github.com/Techpay-foundation/sirius-base/abft/dagidx"
-	"github.com/Techpay-foundation/sirius-base/hash"
-	"github.com/Techpay-foundation/sirius-base/inter/idx"
-	"github.com/Techpay-foundation/sirius-base/vecfc"
+	"github.com/Techpay-io/sirius-base/abft/dagidx"
+	"github.com/Techpay-io/sirius-base/hash"
+	"github.com/Techpay-io/sirius-base/inter/idx"
+	"github.com/Techpay-io/sirius-base/vecfc"
 )
 
 type VectorSeqToDagIndexSeq struct {

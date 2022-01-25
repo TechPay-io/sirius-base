@@ -1,7 +1,7 @@
 package ancestor
 
 import (
-	"github.com/Techpay-foundation/sirius-base/hash"
+	"github.com/Techpay-io/sirius-base/hash"
 )
 
 // SearchStrategy defines a criteria used to estimate the "best" subset of parents to emit event with.

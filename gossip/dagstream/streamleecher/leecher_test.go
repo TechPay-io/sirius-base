@@ -8,9 +8,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/Techpay-foundation/sirius-base/gossip/dagstream"
-	"github.com/Techpay-foundation/sirius-base/hash"
-	"github.com/Techpay-foundation/sirius-base/inter/idx"
+	"github.com/Techpay-io/sirius-base/gossip/dagstream"
+	"github.com/Techpay-io/sirius-base/hash"
+	"github.com/Techpay-io/sirius-base/inter/idx"
 )
 
 func TestLeecherNoDeadlocks(t *testing.T) {

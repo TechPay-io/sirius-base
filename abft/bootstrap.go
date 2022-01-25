@@ -3,9 +3,9 @@ package abft
 import (
 	"errors"
 
-	"github.com/Techpay-foundation/sirius-base/abft/election"
-	"github.com/Techpay-foundation/sirius-base/inter/idx"
-	"github.com/Techpay-foundation/sirius-base/inter/pos"
+	"github.com/Techpay-io/sirius-base/abft/election"
+	"github.com/Techpay-io/sirius-base/inter/idx"
+	"github.com/Techpay-io/sirius-base/inter/pos"
 )
 
 const (

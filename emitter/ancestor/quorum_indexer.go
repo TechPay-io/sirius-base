@@ -4,12 +4,12 @@ import (
 	"math"
 	"sort"
 
-	"github.com/Techpay-foundation/sirius-base/abft/dagidx"
-	"github.com/Techpay-foundation/sirius-base/hash"
-	"github.com/Techpay-foundation/sirius-base/inter/dag"
-	"github.com/Techpay-foundation/sirius-base/inter/idx"
-	"github.com/Techpay-foundation/sirius-base/inter/pos"
-	"github.com/Techpay-foundation/sirius-base/utils/wmedian"
+	"github.com/Techpay-io/sirius-base/abft/dagidx"
+	"github.com/Techpay-io/sirius-base/hash"
+	"github.com/Techpay-io/sirius-base/inter/dag"
+	"github.com/Techpay-io/sirius-base/inter/idx"
+	"github.com/Techpay-io/sirius-base/inter/pos"
+	"github.com/Techpay-io/sirius-base/utils/wmedian"
 )
 
 type DagIndex interface {

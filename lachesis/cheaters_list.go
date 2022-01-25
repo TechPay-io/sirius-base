@@ -3,7 +3,7 @@ package sirius
 import (
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"github.com/Techpay-foundation/sirius-base/inter/idx"
+	"github.com/Techpay-io/sirius-base/inter/idx"
 )
 
 // Cheaters is a slice type for storing cheaters list.

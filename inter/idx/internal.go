@@ -1,7 +1,7 @@
 package idx
 
 import (
-	"github.com/Techpay-foundation/sirius-base/common/bigendian"
+	"github.com/Techpay-io/sirius-base/common/bigendian"
 )
 
 type (

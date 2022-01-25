@@ -1,7 +1,7 @@
 package pos
 
 import (
-	"github.com/Techpay-foundation/sirius-base/inter/idx"
+	"github.com/Techpay-io/sirius-base/inter/idx"
 )
 
 type (

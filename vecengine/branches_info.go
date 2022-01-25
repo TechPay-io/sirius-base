@@ -1,8 +1,8 @@
 package vecengine
 
 import (
-	"github.com/Techpay-foundation/sirius-base/inter/idx"
-	"github.com/Techpay-foundation/sirius-base/inter/pos"
+	"github.com/Techpay-io/sirius-base/inter/idx"
+	"github.com/Techpay-io/sirius-base/inter/pos"
 )
 
 // BranchesInfo contains information about global branches of each validator

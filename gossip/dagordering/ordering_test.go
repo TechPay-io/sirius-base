@@ -8,10 +8,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Techpay-foundation/sirius-base/hash"
-	"github.com/Techpay-foundation/sirius-base/inter/dag"
-	"github.com/Techpay-foundation/sirius-base/inter/dag/tdag"
-	"github.com/Techpay-foundation/sirius-base/inter/idx"
+	"github.com/Techpay-io/sirius-base/hash"
+	"github.com/Techpay-io/sirius-base/inter/dag"
+	"github.com/Techpay-io/sirius-base/inter/dag/tdag"
+	"github.com/Techpay-io/sirius-base/inter/idx"
 )
 
 func TestEventsBuffer(t *testing.T) {

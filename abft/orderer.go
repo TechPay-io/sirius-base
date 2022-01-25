@@ -1,11 +1,11 @@
 package abft
 
 import (
-	"github.com/Techpay-foundation/sirius-base/abft/dagidx"
-	"github.com/Techpay-foundation/sirius-base/abft/election"
-	"github.com/Techpay-foundation/sirius-base/hash"
-	"github.com/Techpay-foundation/sirius-base/inter/idx"
-	"github.com/Techpay-foundation/sirius-base/inter/pos"
+	"github.com/Techpay-io/sirius-base/abft/dagidx"
+	"github.com/Techpay-io/sirius-base/abft/election"
+	"github.com/Techpay-io/sirius-base/hash"
+	"github.com/Techpay-io/sirius-base/inter/idx"
+	"github.com/Techpay-io/sirius-base/inter/pos"
 )
 
 type OrdererCallbacks struct {

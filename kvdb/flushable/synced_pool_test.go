@@ -5,10 +5,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/Techpay-foundation/sirius-base/common/bigendian"
-	"github.com/Techpay-foundation/sirius-base/kvdb"
-	"github.com/Techpay-foundation/sirius-base/kvdb/memorydb"
-	"github.com/Techpay-foundation/sirius-base/kvdb/table"
+	"github.com/Techpay-io/sirius-base/common/bigendian"
+	"github.com/Techpay-io/sirius-base/kvdb"
+	"github.com/Techpay-io/sirius-base/kvdb/memorydb"
+	"github.com/Techpay-io/sirius-base/kvdb/table"
 )
 
 func TestSyncedPoolUnderlying(t *testing.T) {

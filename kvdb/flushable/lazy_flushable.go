@@ -1,8 +1,8 @@
 package flushable
 
 import (
-	"github.com/Techpay-foundation/sirius-base/kvdb"
-	"github.com/Techpay-foundation/sirius-base/kvdb/devnulldb"
+	"github.com/Techpay-io/sirius-base/kvdb"
+	"github.com/Techpay-io/sirius-base/kvdb/devnulldb"
 )
 
 // LazyFlushable is a Flushable with delayed DB producer

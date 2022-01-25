@@ -4,7 +4,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/Techpay-foundation/sirius-base/hash"
+	"github.com/Techpay-io/sirius-base/hash"
 )
 
 /*

@@ -3,7 +3,7 @@ package synced
 import (
 	"sync"
 
-	"github.com/Techpay-foundation/sirius-base/kvdb"
+	"github.com/Techpay-io/sirius-base/kvdb"
 )
 
 // readonlyStore wrapper around any kvdb.ReadonlyStore.

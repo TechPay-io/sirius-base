@@ -1,6 +1,6 @@
 package abft
 
-import "github.com/Techpay-foundation/sirius-base/utils/cachescale"
+import "github.com/Techpay-io/sirius-base/utils/cachescale"
 
 type Config struct {
 }

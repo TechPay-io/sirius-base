@@ -8,7 +8,7 @@ import (
 	rbt "github.com/emirpasic/gods/trees/redblacktree"
 	"github.com/ethereum/go-ethereum/common"
 
-	"github.com/Techpay-foundation/sirius-base/kvdb"
+	"github.com/Techpay-io/sirius-base/kvdb"
 )
 
 var (
