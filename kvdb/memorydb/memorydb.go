@@ -10,7 +10,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"github.com/Fantom-foundation/lachesis-base/kvdb"
+	"github.com/Techpay-foundation/sirius-base/kvdb"
 )
 
 var (

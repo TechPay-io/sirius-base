@@ -1,10 +1,10 @@
 package adapters
 
 import (
-	"github.com/Fantom-foundation/lachesis-base/abft/dagidx"
-	"github.com/Fantom-foundation/lachesis-base/hash"
-	"github.com/Fantom-foundation/lachesis-base/inter/idx"
-	"github.com/Fantom-foundation/lachesis-base/vecfc"
+	"github.com/Techpay-foundation/sirius-base/abft/dagidx"
+	"github.com/Techpay-foundation/sirius-base/hash"
+	"github.com/Techpay-foundation/sirius-base/inter/idx"
+	"github.com/Techpay-foundation/sirius-base/vecfc"
 )
 
 type VectorSeqToDagIndexSeq struct {

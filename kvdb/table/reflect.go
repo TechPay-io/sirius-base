@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"reflect"
 
-	"github.com/Fantom-foundation/lachesis-base/kvdb"
+	"github.com/Techpay-foundation/sirius-base/kvdb"
 )
 
 // MigrateTables sets target fields to database tables.

@@ -8,15 +8,15 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/Fantom-foundation/lachesis-base/hash"
-	"github.com/Fantom-foundation/lachesis-base/inter/dag"
-	"github.com/Fantom-foundation/lachesis-base/inter/dag/tdag"
-	"github.com/Fantom-foundation/lachesis-base/inter/idx"
-	"github.com/Fantom-foundation/lachesis-base/inter/pos"
-	"github.com/Fantom-foundation/lachesis-base/kvdb/memorydb"
-	"github.com/Fantom-foundation/lachesis-base/utils"
-	"github.com/Fantom-foundation/lachesis-base/utils/adapters"
-	"github.com/Fantom-foundation/lachesis-base/vecfc"
+	"github.com/Techpay-foundation/sirius-base/hash"
+	"github.com/Techpay-foundation/sirius-base/inter/dag"
+	"github.com/Techpay-foundation/sirius-base/inter/dag/tdag"
+	"github.com/Techpay-foundation/sirius-base/inter/idx"
+	"github.com/Techpay-foundation/sirius-base/inter/pos"
+	"github.com/Techpay-foundation/sirius-base/kvdb/memorydb"
+	"github.com/Techpay-foundation/sirius-base/utils"
+	"github.com/Techpay-foundation/sirius-base/utils/adapters"
+	"github.com/Techpay-foundation/sirius-base/vecfc"
 )
 
 func TestCasualityStrategy(t *testing.T) {

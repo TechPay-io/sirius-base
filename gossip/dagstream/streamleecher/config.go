@@ -3,8 +3,8 @@ package streamleecher
 import (
 	"time"
 
-	"github.com/Fantom-foundation/lachesis-base/gossip/dagstream/streamleecher/peerleecher"
-	"github.com/Fantom-foundation/lachesis-base/inter/dag"
+	"github.com/Techpay-foundation/sirius-base/gossip/dagstream/streamleecher/peerleecher"
+	"github.com/Techpay-foundation/sirius-base/inter/dag"
 )
 
 type Config struct {

@@ -8,13 +8,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Fantom-foundation/lachesis-base/eventcheck/queuedcheck"
-	"github.com/Fantom-foundation/lachesis-base/hash"
-	"github.com/Fantom-foundation/lachesis-base/inter/dag"
-	"github.com/Fantom-foundation/lachesis-base/inter/dag/tdag"
-	"github.com/Fantom-foundation/lachesis-base/inter/idx"
-	"github.com/Fantom-foundation/lachesis-base/utils/cachescale"
-	"github.com/Fantom-foundation/lachesis-base/utils/datasemaphore"
+	"github.com/Techpay-foundation/sirius-base/eventcheck/queuedcheck"
+	"github.com/Techpay-foundation/sirius-base/hash"
+	"github.com/Techpay-foundation/sirius-base/inter/dag"
+	"github.com/Techpay-foundation/sirius-base/inter/dag/tdag"
+	"github.com/Techpay-foundation/sirius-base/inter/idx"
+	"github.com/Techpay-foundation/sirius-base/utils/cachescale"
+	"github.com/Techpay-foundation/sirius-base/utils/datasemaphore"
 )
 
 func TestProcessor(t *testing.T) {
@@ -28,7 +28,7 @@ var maxGroupSize = dag.Metric{
 	Size: 50 * 50,
 }
 
-func shuffleTasksIntoChunks(inTasks []queuedcheck.EventTask)  [][]queuedcheck.EventTask {
+func shuffleTasksIntoChunks(inTasks []queuedcheck.EventTask) [][]queuedcheck.EventTask {
 	if len(inTasks) == 0 {
 		return nil
 	}

@@ -1,7 +1,7 @@
 package memorydb
 
 import (
-	"github.com/Fantom-foundation/lachesis-base/kvdb"
+	"github.com/Techpay-foundation/sirius-base/kvdb"
 )
 
 type Mod func(kvdb.DropableStore) kvdb.DropableStore

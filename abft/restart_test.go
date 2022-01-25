@@ -8,15 +8,15 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/Fantom-foundation/lachesis-base/inter/dag"
-	"github.com/Fantom-foundation/lachesis-base/inter/dag/tdag"
-	"github.com/Fantom-foundation/lachesis-base/inter/idx"
-	"github.com/Fantom-foundation/lachesis-base/inter/pos"
-	"github.com/Fantom-foundation/lachesis-base/kvdb"
-	"github.com/Fantom-foundation/lachesis-base/kvdb/memorydb"
-	"github.com/Fantom-foundation/lachesis-base/lachesis"
-	"github.com/Fantom-foundation/lachesis-base/utils/adapters"
-	"github.com/Fantom-foundation/lachesis-base/vecfc"
+	"github.com/Techpay-foundation/sirius-base/inter/dag"
+	"github.com/Techpay-foundation/sirius-base/inter/dag/tdag"
+	"github.com/Techpay-foundation/sirius-base/inter/idx"
+	"github.com/Techpay-foundation/sirius-base/inter/pos"
+	"github.com/Techpay-foundation/sirius-base/kvdb"
+	"github.com/Techpay-foundation/sirius-base/kvdb/memorydb"
+	"github.com/Techpay-foundation/sirius-base/sirius"
+	"github.com/Techpay-foundation/sirius-base/utils/adapters"
+	"github.com/Techpay-foundation/sirius-base/vecfc"
 )
 
 func TestRestart_1(t *testing.T) {
@@ -70,10 +70,10 @@ func testRestart(t *testing.T, weights []pos.Weight, cheatersCount int) {
 	)
 
 	nodes := tdag.GenNodes(len(weights))
-	lchs := make([]*TestLachesis, 0, COUNT)
+	lchs := make([]*TestSirius, 0, COUNT)
 	inputs := make([]*EventStore, 0, COUNT)
 	for i := 0; i < COUNT; i++ {
-		lch, _, input := FakeLachesis(nodes, weights)
+		lch, _, input := FakeSirius(nodes, weights)
 		lchs = append(lchs, lch)
 		inputs = append(inputs, input)
 	}
@@ -84,7 +84,7 @@ func testRestart(t *testing.T, weights []pos.Weight, cheatersCount int) {
 	// seal epoch on decided frame == maxEpochBlocks
 	for _, _lch := range lchs {
 		lch := _lch // capture
-		lch.applyBlock = func(block *lachesis.Block) *pos.Validators {
+		lch.applyBlock = func(block *sirius.Block) *pos.Validators {
 			if lch.store.GetLastDecidedFrame()+1 == idx.Frame(maxEpochBlocks) {
 				// seal epoch
 				return lch.store.GetValidators()
@@ -149,10 +149,10 @@ func testRestart(t *testing.T, weights []pos.Weight, cheatersCount int) {
 				return memorydb.New()
 			}
 
-			restored := NewIndexedLachesis(store, prev.input, &adapters.VectorToDagIndexer{vecfc.NewIndex(prev.crit, vecfc.LiteConfig())}, prev.crit, prev.config)
+			restored := NewIndexedSirius(store, prev.input, &adapters.VectorToDagIndexer{vecfc.NewIndex(prev.crit, vecfc.LiteConfig())}, prev.crit, prev.config)
 			assertar.NoError(restored.Bootstrap(prev.callback))
 
-			lchs[RESTORED].IndexedLachesis = restored
+			lchs[RESTORED].IndexedSirius = restored
 		}
 
 		if !assertar.Equal(e.Epoch(), lchs[EXPECTED].store.GetEpoch()) {
@@ -178,7 +178,7 @@ func testRestart(t *testing.T, weights []pos.Weight, cheatersCount int) {
 	compareBlocks(assertar, lchs[EXPECTED], lchs[RESTORED])
 }
 
-func compareStates(assertar *assert.Assertions, expected, restored *TestLachesis) {
+func compareStates(assertar *assert.Assertions, expected, restored *TestSirius) {
 	assertar.Equal(
 		*(expected.store.GetLastDecidedState()), *(restored.store.GetLastDecidedState()))
 	assertar.Equal(
@@ -192,7 +192,7 @@ func compareStates(assertar *assert.Assertions, expected, restored *TestLachesis
 	}
 }
 
-func compareBlocks(assertar *assert.Assertions, expected, restored *TestLachesis) {
+func compareBlocks(assertar *assert.Assertions, expected, restored *TestSirius) {
 	assertar.Equal(len(expected.blocks), len(restored.blocks))
 	for i := idx.Block(1); i <= idx.Block(len(restored.blocks)); i++ {
 		if !assertar.NotNil(restored.blocks[i]) ||

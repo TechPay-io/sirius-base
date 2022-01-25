@@ -7,11 +7,11 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/Fantom-foundation/lachesis-base/inter/dag"
-	"github.com/Fantom-foundation/lachesis-base/inter/dag/tdag"
-	"github.com/Fantom-foundation/lachesis-base/inter/idx"
-	"github.com/Fantom-foundation/lachesis-base/inter/pos"
-	"github.com/Fantom-foundation/lachesis-base/lachesis"
+	"github.com/Techpay-foundation/sirius-base/inter/dag"
+	"github.com/Techpay-foundation/sirius-base/inter/dag/tdag"
+	"github.com/Techpay-foundation/sirius-base/inter/idx"
+	"github.com/Techpay-foundation/sirius-base/inter/pos"
+	"github.com/Techpay-foundation/sirius-base/sirius"
 )
 
 func TestConfirmBlocks_1(t *testing.T) {
@@ -58,13 +58,13 @@ func testConfirmBlocks(t *testing.T, weights []pos.Weight, cheatersCount int) {
 	assertar := assert.New(t)
 
 	nodes := tdag.GenNodes(len(weights))
-	lch, _, input := FakeLachesis(nodes, weights)
+	lch, _, input := FakeSirius(nodes, weights)
 
 	var (
 		frames []idx.Frame
-		blocks []*lachesis.Block
+		blocks []*sirius.Block
 	)
-	lch.applyBlock = func(block *lachesis.Block) *pos.Validators {
+	lch.applyBlock = func(block *sirius.Block) *pos.Validators {
 		frames = append(frames, lch.store.GetLastDecidedFrame()+1)
 		blocks = append(blocks, block)
 

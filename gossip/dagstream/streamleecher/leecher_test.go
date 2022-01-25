@@ -8,9 +8,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/Fantom-foundation/lachesis-base/gossip/dagstream"
-	"github.com/Fantom-foundation/lachesis-base/hash"
-	"github.com/Fantom-foundation/lachesis-base/inter/idx"
+	"github.com/Techpay-foundation/sirius-base/gossip/dagstream"
+	"github.com/Techpay-foundation/sirius-base/hash"
+	"github.com/Techpay-foundation/sirius-base/inter/idx"
 )
 
 func TestLeecherNoDeadlocks(t *testing.T) {

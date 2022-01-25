@@ -1,7 +1,7 @@
-package lachesis
+package sirius
 
 import (
-	"github.com/Fantom-foundation/lachesis-base/hash"
+	"github.com/Techpay-foundation/sirius-base/hash"
 )
 
 // Block is a part of an ordered chain of batches of events.

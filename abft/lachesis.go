@@ -1,35 +1,35 @@
 package abft
 
 import (
-	"github.com/Fantom-foundation/lachesis-base/abft/dagidx"
-	"github.com/Fantom-foundation/lachesis-base/hash"
-	"github.com/Fantom-foundation/lachesis-base/inter/dag"
-	"github.com/Fantom-foundation/lachesis-base/inter/idx"
-	"github.com/Fantom-foundation/lachesis-base/inter/pos"
-	"github.com/Fantom-foundation/lachesis-base/lachesis"
+	"github.com/Techpay-foundation/sirius-base/abft/dagidx"
+	"github.com/Techpay-foundation/sirius-base/hash"
+	"github.com/Techpay-foundation/sirius-base/inter/dag"
+	"github.com/Techpay-foundation/sirius-base/inter/idx"
+	"github.com/Techpay-foundation/sirius-base/inter/pos"
+	"github.com/Techpay-foundation/sirius-base/sirius"
 )
 
-var _ lachesis.Consensus = (*Lachesis)(nil)
+var _ sirius.Consensus = (*Sirius)(nil)
 
 type DagIndex interface {
 	dagidx.VectorClock
 	dagidx.ForklessCause
 }
 
-// Lachesis performs events ordering and detects cheaters
+// Sirius performs events ordering and detects cheaters
 // It's a wrapper around Orderer, which adds features which might potentially be application-specific:
 // confirmed events traversal, cheaters detection.
 // Use this structure if need a general-purpose consensus. Instead, use lower-level abft.Orderer.
-type Lachesis struct {
+type Sirius struct {
 	*Orderer
 	dagIndex      DagIndex
 	uniqueDirtyID uniqueID
-	callback      lachesis.ConsensusCallbacks
+	callback      sirius.ConsensusCallbacks
 }
 
-// New creates Lachesis instance.
-func NewLachesis(store *Store, input EventSource, dagIndex DagIndex, crit func(error), config Config) *Lachesis {
-	p := &Lachesis{
+// New creates Sirius instance.
+func NewSirius(store *Store, input EventSource, dagIndex DagIndex, crit func(error), config Config) *Sirius {
+	p := &Sirius{
 		Orderer:  NewOrderer(store, input, dagIndex, crit, config),
 		dagIndex: dagIndex,
 	}
@@ -37,7 +37,7 @@ func NewLachesis(store *Store, input EventSource, dagIndex DagIndex, crit func(e
 	return p
 }
 
-func (p *Lachesis) confirmEvents(frame idx.Frame, atropos hash.Event, onEventConfirmed func(dag.Event)) error {
+func (p *Sirius) confirmEvents(frame idx.Frame, atropos hash.Event, onEventConfirmed func(dag.Event)) error {
 	err := p.dfsSubgraph(atropos, func(e dag.Event) bool {
 		decidedFrame := p.store.GetEventConfirmedOn(e.ID())
 		if decidedFrame != 0 {
@@ -53,7 +53,7 @@ func (p *Lachesis) confirmEvents(frame idx.Frame, atropos hash.Event, onEventCon
 	return err
 }
 
-func (p *Lachesis) applyAtropos(decidedFrame idx.Frame, atropos hash.Event) *pos.Validators {
+func (p *Sirius) applyAtropos(decidedFrame idx.Frame, atropos hash.Event) *pos.Validators {
 	atroposVecClock := p.dagIndex.GetMergedHighestBefore(atropos)
 
 	validators := p.store.GetValidators()
@@ -68,7 +68,7 @@ func (p *Lachesis) applyAtropos(decidedFrame idx.Frame, atropos hash.Event) *pos
 	if p.callback.BeginBlock == nil {
 		return nil
 	}
-	blockCallback := p.callback.BeginBlock(&lachesis.Block{
+	blockCallback := p.callback.BeginBlock(&sirius.Block{
 		Atropos:  atropos,
 		Cheaters: cheaters,
 	})
@@ -85,11 +85,11 @@ func (p *Lachesis) applyAtropos(decidedFrame idx.Frame, atropos hash.Event) *pos
 	return nil
 }
 
-func (p *Lachesis) Bootstrap(callback lachesis.ConsensusCallbacks) error {
+func (p *Sirius) Bootstrap(callback sirius.ConsensusCallbacks) error {
 	return p.BootstrapWithOrderer(callback, p.OrdererCallbacks())
 }
 
-func (p *Lachesis) BootstrapWithOrderer(callback lachesis.ConsensusCallbacks, ordererCallbacks OrdererCallbacks) error {
+func (p *Sirius) BootstrapWithOrderer(callback sirius.ConsensusCallbacks, ordererCallbacks OrdererCallbacks) error {
 	err := p.Orderer.Bootstrap(ordererCallbacks)
 	if err != nil {
 		return err
@@ -98,7 +98,7 @@ func (p *Lachesis) BootstrapWithOrderer(callback lachesis.ConsensusCallbacks, or
 	return nil
 }
 
-func (p *Lachesis) OrdererCallbacks() OrdererCallbacks {
+func (p *Sirius) OrdererCallbacks() OrdererCallbacks {
 	return OrdererCallbacks{
 		ApplyAtropos: p.applyAtropos,
 	}

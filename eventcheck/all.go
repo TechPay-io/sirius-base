@@ -1,10 +1,10 @@
 package eventcheck
 
 import (
-	"github.com/Fantom-foundation/lachesis-base/eventcheck/basiccheck"
-	"github.com/Fantom-foundation/lachesis-base/eventcheck/epochcheck"
-	"github.com/Fantom-foundation/lachesis-base/eventcheck/parentscheck"
-	"github.com/Fantom-foundation/lachesis-base/inter/dag"
+	"github.com/Techpay-foundation/sirius-base/eventcheck/basiccheck"
+	"github.com/Techpay-foundation/sirius-base/eventcheck/epochcheck"
+	"github.com/Techpay-foundation/sirius-base/eventcheck/parentscheck"
+	"github.com/Techpay-foundation/sirius-base/inter/dag"
 )
 
 // Checkers is collection of all the checkers
@@ -14,7 +14,7 @@ type Checkers struct {
 	Parentscheck *parentscheck.Checker
 }
 
-// Validate runs all the checks except Lachesis-related
+// Validate runs all the checks except Sirius-related
 func (v *Checkers) Validate(e dag.Event, parents dag.Events) error {
 	if err := v.Basiccheck.Validate(e); err != nil {
 		return err

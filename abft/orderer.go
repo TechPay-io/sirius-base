@@ -1,11 +1,11 @@
 package abft
 
 import (
-	"github.com/Fantom-foundation/lachesis-base/abft/dagidx"
-	"github.com/Fantom-foundation/lachesis-base/abft/election"
-	"github.com/Fantom-foundation/lachesis-base/hash"
-	"github.com/Fantom-foundation/lachesis-base/inter/idx"
-	"github.com/Fantom-foundation/lachesis-base/inter/pos"
+	"github.com/Techpay-foundation/sirius-base/abft/dagidx"
+	"github.com/Techpay-foundation/sirius-base/abft/election"
+	"github.com/Techpay-foundation/sirius-base/hash"
+	"github.com/Techpay-foundation/sirius-base/inter/idx"
+	"github.com/Techpay-foundation/sirius-base/inter/pos"
 )
 
 type OrdererCallbacks struct {
@@ -19,7 +19,7 @@ type OrdererDagIndex interface {
 }
 
 // Unlike processes events to reach finality on their order.
-// Unlike abft.Lachesis, this raw level of abstraction doesn't track cheaters detection
+// Unlike abft.Sirius, this raw level of abstraction doesn't track cheaters detection
 type Orderer struct {
 	config Config
 	crit   func(error)
@@ -33,7 +33,7 @@ type Orderer struct {
 }
 
 // New creates Orderer instance.
-// Unlike Lachesis, Orderer doesn't updates DAG indexes for events, and doesn't detect cheaters
+// Unlike Sirius, Orderer doesn't updates DAG indexes for events, and doesn't detect cheaters
 // It has only one purpose - reaching consensus on events order.
 func NewOrderer(store *Store, input EventSource, dagIndex OrdererDagIndex, crit func(error), config Config) *Orderer {
 	p := &Orderer{

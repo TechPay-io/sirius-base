@@ -5,11 +5,11 @@ import (
 
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"github.com/Fantom-foundation/lachesis-base/inter/idx"
-	"github.com/Fantom-foundation/lachesis-base/kvdb"
-	"github.com/Fantom-foundation/lachesis-base/kvdb/memorydb"
-	"github.com/Fantom-foundation/lachesis-base/kvdb/table"
-	"github.com/Fantom-foundation/lachesis-base/utils/simplewlru"
+	"github.com/Techpay-foundation/sirius-base/inter/idx"
+	"github.com/Techpay-foundation/sirius-base/kvdb"
+	"github.com/Techpay-foundation/sirius-base/kvdb/memorydb"
+	"github.com/Techpay-foundation/sirius-base/kvdb/table"
+	"github.com/Techpay-foundation/sirius-base/utils/simplewlru"
 )
 
 // Store is a abft persistent storage working over parent key-value database.

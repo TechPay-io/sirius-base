@@ -1,9 +1,9 @@
-package lachesis
+package sirius
 
 import (
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"github.com/Fantom-foundation/lachesis-base/inter/idx"
+	"github.com/Techpay-foundation/sirius-base/inter/idx"
 )
 
 // Cheaters is a slice type for storing cheaters list.

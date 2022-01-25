@@ -3,7 +3,7 @@ package nokeyiserr
 import (
 	"errors"
 
-	"github.com/Fantom-foundation/lachesis-base/kvdb"
+	"github.com/Techpay-foundation/sirius-base/kvdb"
 )
 
 var (

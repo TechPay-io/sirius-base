@@ -1,28 +1,28 @@
 package abft
 
 import (
-	"github.com/Fantom-foundation/lachesis-base/inter/idx"
-	"github.com/Fantom-foundation/lachesis-base/inter/pos"
-	"github.com/Fantom-foundation/lachesis-base/kvdb"
-	"github.com/Fantom-foundation/lachesis-base/kvdb/memorydb"
-	"github.com/Fantom-foundation/lachesis-base/lachesis"
-	"github.com/Fantom-foundation/lachesis-base/utils/adapters"
-	"github.com/Fantom-foundation/lachesis-base/vecfc"
+	"github.com/Techpay-foundation/sirius-base/inter/idx"
+	"github.com/Techpay-foundation/sirius-base/inter/pos"
+	"github.com/Techpay-foundation/sirius-base/kvdb"
+	"github.com/Techpay-foundation/sirius-base/kvdb/memorydb"
+	"github.com/Techpay-foundation/sirius-base/sirius"
+	"github.com/Techpay-foundation/sirius-base/utils/adapters"
+	"github.com/Techpay-foundation/sirius-base/vecfc"
 )
 
-type applyBlockFn func(block *lachesis.Block) *pos.Validators
+type applyBlockFn func(block *sirius.Block) *pos.Validators
 
-// TestLachesis extends Lachesis for tests.
-type TestLachesis struct {
-	*IndexedLachesis
+// TestSirius extends Sirius for tests.
+type TestSirius struct {
+	*IndexedSirius
 
-	blocks map[idx.Block]*lachesis.Block
+	blocks map[idx.Block]*sirius.Block
 
 	applyBlock applyBlockFn
 }
 
-// FakeLachesis creates empty abft with mem store and equal weights of nodes in genesis.
-func FakeLachesis(nodes []idx.ValidatorID, weights []pos.Weight, mods ...memorydb.Mod) (*TestLachesis, *Store, *EventStore) {
+// FakeSirius creates empty abft with mem store and equal weights of nodes in genesis.
+func FakeSirius(nodes []idx.ValidatorID, weights []pos.Weight, mods ...memorydb.Mod) (*TestSirius, *Store, *EventStore) {
 	validators := make(pos.ValidatorsBuilder, len(nodes))
 	for i, v := range nodes {
 		if weights == nil {
@@ -51,19 +51,19 @@ func FakeLachesis(nodes []idx.ValidatorID, weights []pos.Weight, mods ...memoryd
 	input := NewEventStore()
 
 	config := LiteConfig()
-	lch := NewIndexedLachesis(store, input, &adapters.VectorToDagIndexer{vecfc.NewIndex(crit, vecfc.LiteConfig())}, crit, config)
+	lch := NewIndexedSirius(store, input, &adapters.VectorToDagIndexer{vecfc.NewIndex(crit, vecfc.LiteConfig())}, crit, config)
 
-	extended := &TestLachesis{
-		IndexedLachesis: lch,
-		blocks:          map[idx.Block]*lachesis.Block{},
+	extended := &TestSirius{
+		IndexedSirius: lch,
+		blocks:        map[idx.Block]*sirius.Block{},
 	}
 
 	blockIdx := idx.Block(0)
 
-	err = extended.Bootstrap(lachesis.ConsensusCallbacks{
-		BeginBlock: func(block *lachesis.Block) lachesis.BlockCallbacks {
+	err = extended.Bootstrap(sirius.ConsensusCallbacks{
+		BeginBlock: func(block *sirius.Block) sirius.BlockCallbacks {
 			blockIdx++
-			return lachesis.BlockCallbacks{
+			return sirius.BlockCallbacks{
 				EndBlock: func() (sealEpoch *pos.Validators) {
 					// track blocks
 					extended.blocks[blockIdx] = block

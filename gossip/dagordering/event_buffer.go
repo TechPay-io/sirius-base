@@ -4,11 +4,11 @@ import (
 	"math"
 	"sync"
 
-	"github.com/Fantom-foundation/lachesis-base/eventcheck"
-	"github.com/Fantom-foundation/lachesis-base/hash"
-	"github.com/Fantom-foundation/lachesis-base/inter/dag"
-	"github.com/Fantom-foundation/lachesis-base/inter/idx"
-	"github.com/Fantom-foundation/lachesis-base/utils/wlru"
+	"github.com/Techpay-foundation/sirius-base/eventcheck"
+	"github.com/Techpay-foundation/sirius-base/hash"
+	"github.com/Techpay-foundation/sirius-base/inter/dag"
+	"github.com/Techpay-foundation/sirius-base/inter/idx"
+	"github.com/Techpay-foundation/sirius-base/utils/wlru"
 )
 
 type (

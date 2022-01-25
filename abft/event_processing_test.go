@@ -7,67 +7,67 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/Fantom-foundation/lachesis-base/inter/dag"
-	"github.com/Fantom-foundation/lachesis-base/inter/dag/tdag"
-	"github.com/Fantom-foundation/lachesis-base/inter/idx"
-	"github.com/Fantom-foundation/lachesis-base/inter/pos"
+	"github.com/Techpay-foundation/sirius-base/inter/dag"
+	"github.com/Techpay-foundation/sirius-base/inter/dag/tdag"
+	"github.com/Techpay-foundation/sirius-base/inter/idx"
+	"github.com/Techpay-foundation/sirius-base/inter/pos"
 )
 
 const (
 	TestMaxEpochBlocks = 200
 )
 
-func TestLachesisRandom_1(t *testing.T) {
-	testLachesisRandom(t, []pos.Weight{1}, 0)
+func TestSiriusRandom_1(t *testing.T) {
+	testSiriusRandom(t, []pos.Weight{1}, 0)
 }
 
-func TestLachesisRandom_big1(t *testing.T) {
-	testLachesisRandom(t, []pos.Weight{math.MaxUint32 / 2}, 0)
+func TestSiriusRandom_big1(t *testing.T) {
+	testSiriusRandom(t, []pos.Weight{math.MaxUint32 / 2}, 0)
 }
 
-func TestLachesisRandom_big2(t *testing.T) {
-	testLachesisRandom(t, []pos.Weight{math.MaxUint32 / 4, math.MaxUint32 / 4}, 0)
+func TestSiriusRandom_big2(t *testing.T) {
+	testSiriusRandom(t, []pos.Weight{math.MaxUint32 / 4, math.MaxUint32 / 4}, 0)
 }
 
-func TestLachesisRandom_big3(t *testing.T) {
-	testLachesisRandom(t, []pos.Weight{math.MaxUint32 / 8, math.MaxUint32 / 8, math.MaxUint32 / 4}, 0)
+func TestSiriusRandom_big3(t *testing.T) {
+	testSiriusRandom(t, []pos.Weight{math.MaxUint32 / 8, math.MaxUint32 / 8, math.MaxUint32 / 4}, 0)
 }
 
-func TestLachesisRandom_4(t *testing.T) {
-	testLachesisRandom(t, []pos.Weight{1, 2, 3, 4}, 0)
+func TestSiriusRandom_4(t *testing.T) {
+	testSiriusRandom(t, []pos.Weight{1, 2, 3, 4}, 0)
 }
 
-func TestLachesisRandom_3_1(t *testing.T) {
-	testLachesisRandom(t, []pos.Weight{1, 1, 1, 1}, 1)
+func TestSiriusRandom_3_1(t *testing.T) {
+	testSiriusRandom(t, []pos.Weight{1, 1, 1, 1}, 1)
 }
 
-func TestLachesisRandom_67_33(t *testing.T) {
-	testLachesisRandom(t, []pos.Weight{33, 67}, 1)
+func TestSiriusRandom_67_33(t *testing.T) {
+	testSiriusRandom(t, []pos.Weight{33, 67}, 1)
 }
 
-func TestLachesisRandom_67_33_4(t *testing.T) {
-	testLachesisRandom(t, []pos.Weight{11, 11, 11, 67}, 3)
+func TestSiriusRandom_67_33_4(t *testing.T) {
+	testSiriusRandom(t, []pos.Weight{11, 11, 11, 67}, 3)
 }
 
-func TestLachesisRandom_67_33_5(t *testing.T) {
-	testLachesisRandom(t, []pos.Weight{11, 11, 11, 33, 34}, 3)
+func TestSiriusRandom_67_33_5(t *testing.T) {
+	testSiriusRandom(t, []pos.Weight{11, 11, 11, 33, 34}, 3)
 }
 
-func TestLachesisRandom_2_8_10(t *testing.T) {
-	testLachesisRandom(t, []pos.Weight{1, 2, 1, 2, 1, 2, 1, 2, 1, 2}, 3)
+func TestSiriusRandom_2_8_10(t *testing.T) {
+	testSiriusRandom(t, []pos.Weight{1, 2, 1, 2, 1, 2, 1, 2, 1, 2}, 3)
 }
 
-// TestLachesis 's possibility to get consensus in general on any event order.
-func testLachesisRandom(t *testing.T, weights []pos.Weight, cheatersCount int) {
+// TestSirius 's possibility to get consensus in general on any event order.
+func testSiriusRandom(t *testing.T, weights []pos.Weight, cheatersCount int) {
 	assertar := assert.New(t)
 
 	const lchCount = 3
 	nodes := tdag.GenNodes(len(weights))
 
-	lchs := make([]*TestLachesis, 0, lchCount)
+	lchs := make([]*TestSirius, 0, lchCount)
 	inputs := make([]*EventStore, 0, lchCount)
 	for i := 0; i < lchCount; i++ {
-		lch, _, input := FakeLachesis(nodes, weights)
+		lch, _, input := FakeSirius(nodes, weights)
 		lchs = append(lchs, lch)
 		inputs = append(inputs, input)
 	}
@@ -122,7 +122,7 @@ func reorder(events dag.Events) dag.Events {
 	return reordered
 }
 
-func compareResults(t *testing.T, lchs []*TestLachesis) {
+func compareResults(t *testing.T, lchs []*TestSirius) {
 	assertar := assert.New(t)
 
 	for i := 0; i < len(lchs)-1; i++ {

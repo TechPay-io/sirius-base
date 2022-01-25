@@ -1,15 +1,15 @@
 package vecfc
 
 import (
-	"github.com/Fantom-foundation/lachesis-base/hash"
-	"github.com/Fantom-foundation/lachesis-base/inter/dag"
-	"github.com/Fantom-foundation/lachesis-base/inter/idx"
-	"github.com/Fantom-foundation/lachesis-base/inter/pos"
-	"github.com/Fantom-foundation/lachesis-base/kvdb"
-	"github.com/Fantom-foundation/lachesis-base/kvdb/table"
-	"github.com/Fantom-foundation/lachesis-base/utils/cachescale"
-	"github.com/Fantom-foundation/lachesis-base/utils/simplewlru"
-	"github.com/Fantom-foundation/lachesis-base/vecengine"
+	"github.com/Techpay-foundation/sirius-base/hash"
+	"github.com/Techpay-foundation/sirius-base/inter/dag"
+	"github.com/Techpay-foundation/sirius-base/inter/idx"
+	"github.com/Techpay-foundation/sirius-base/inter/pos"
+	"github.com/Techpay-foundation/sirius-base/kvdb"
+	"github.com/Techpay-foundation/sirius-base/kvdb/table"
+	"github.com/Techpay-foundation/sirius-base/utils/cachescale"
+	"github.com/Techpay-foundation/sirius-base/utils/simplewlru"
+	"github.com/Techpay-foundation/sirius-base/vecengine"
 )
 
 // IndexCacheConfig - config for cache sizes of Engine

@@ -1,4 +1,4 @@
-module github.com/Fantom-foundation/lachesis-base
+module github.com/Techpay-foundation/sirius-base
 
 go 1.14
 
